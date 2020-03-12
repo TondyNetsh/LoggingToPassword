@@ -1,0 +1,18 @@
+2020-03-12 14:34:30,304 | Password: User password ok
+2020-03-12 14:34:30,310 | Password: 
+Invalid password: password should be longer than than 8 characters
+2020-03-12 15:15:31,640 | Password: User password ok
+2020-03-12 15:15:31,647 | Password: 
+Invalid password: password should be longer than than 8 characters
+2020-03-12 15:23:26,240 | Password: User password ok
+2020-03-12 15:23:26,243 | Password: 
+Invalid password: password should be longer than than 8 characters
+2020-03-12 15:23:52,827 | Password: User password ok
+2020-03-12 15:23:52,831 | Password: 
+Invalid password: password should exist.
+2020-03-12 15:24:18,768 | Password: User password ok
+2020-03-12 15:24:18,773 | Password: 
+Invalid password: password should exist.
+2020-03-12 15:24:35,673 | Password: User password ok
+2020-03-12 15:24:35,676 | Password: 
+Invalid password: password should be longer than than 8 characters
