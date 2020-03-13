@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -69,17 +71,17 @@ public class Password {
         if(!oneSpecialChar){
             throw new PasswordException("password should have at least one special character.");
         }
-        System.out.println("Valid password");
     }
 
     public static boolean passwordIsOk(String password) throws PasswordException{
-        boolean valid = false;
+        boolean valid;
 
         if(counter >= 3){
             valid = true;
             System.out.print("Password is valid: " + valid);
         }
         else{
+            valid = false;
             System.out.print("Password is valid: " + valid);
         }
         return valid;
@@ -103,13 +105,14 @@ public class Password {
 
         try {
             if(!Password.passwordIsOk(password)){
-                myLog.debug("User password ok");
+                myLog.debug("User password is not ok.");
                 Password.passwordIsValid(password);
                 Password.passwordIsOk(password);
             }
-            else if (Password.passwordIsOk(password)){
-                myLog.error("User password not ok");
-                //System.out.println("User password not okay.");
+            else{
+                myLog.debug("User password is ok.");
+                Password.passwordIsValid(password);
+                Password.passwordIsOk(password);
             }
         }
         catch (PasswordException e){
